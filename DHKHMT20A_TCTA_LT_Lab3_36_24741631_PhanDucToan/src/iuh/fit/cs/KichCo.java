@@ -9,5 +9,7 @@ package iuh.fit.cs;
  * 
  */
 public enum KichCo {
-
+	NHO,
+	VUA,
+	LON;
 }

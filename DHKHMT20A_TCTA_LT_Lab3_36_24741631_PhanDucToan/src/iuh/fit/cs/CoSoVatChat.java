@@ -12,11 +12,49 @@ public abstract class CoSoVatChat {
 	private int soChan;
 	
 	public CoSoVatChat(String ma, ChatLieu chatLieu, KichCo kichCo, int soChan) {
-		this.ma = ma;
+		setMa(ma);
 		this.chatLieu = chatLieu;
 		this.kichCo = kichCo;
+		setSoChan(soChan);
+	}
+
+	public String getMa() {
+		return ma;
+	}
+
+	public void setMa(String ma) {
+		if(ma == null || ma.isEmpty()) {
+			throw new IllegalArgumentException("Ma khong duoc trong.");
+		}
+		this.ma = ma;
+	}
+
+	public ChatLieu getChatLieu() {
+		return chatLieu;
+	}
+
+	public void setChatLieu(ChatLieu chatLieu) {
+		this.chatLieu = chatLieu;
+	}
+
+	public KichCo getKichCo() {
+		return kichCo;
+	}
+
+	public void setKichCo(KichCo kichCo) {
+		this.kichCo = kichCo;
+	}
+
+	public int getSoChan() {
+		return soChan;
+	}
+
+	public void setSoChan(int soChan) {
+		if(soChan <= 0) {
+			throw new IllegalArgumentException("So chan phai lon hon 0.");
+		}
 		this.soChan = soChan;
 	}
 	
-	
+	public abstract double canNang();
 }

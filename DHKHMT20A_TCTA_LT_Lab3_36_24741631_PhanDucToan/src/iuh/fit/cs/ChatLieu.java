@@ -9,5 +9,8 @@ package iuh.fit.cs;
  * 
  */
 public enum ChatLieu {
-
+	GO,
+	NHUA,
+	KIMLOAI;
+	
 }
