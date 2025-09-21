@@ -8,7 +8,7 @@ package iuh.fit.cs;
 public class Ghe extends CoSoVatChat{
 	private boolean coTuaGhe;
 	
-	public Ghe(String ma, ChatLieu chatLieu, KichCo kichCo, int soChan) {
+	public Ghe(String ma, ChatLieu chatLieu, KichCo kichCo, int soChan, boolean coTuaGhe) {
 		super(ma, chatLieu, kichCo, soChan);
 		setCoTuaGhe(coTuaGhe);
 	}
@@ -25,4 +25,9 @@ public class Ghe extends CoSoVatChat{
 	public double canNang() {
 		return getSoChan() * 10 + (coTuaGhe ? 20 : 0);
 	}
+	
+	@Override
+    public String toString() {
+        return String.format(String.format("Ghe [coTuaGhe = %s, canNang = %.1f]", coTuaGhe, canNang()));
+    }
 }

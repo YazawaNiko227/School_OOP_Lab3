@@ -44,4 +44,9 @@ public class Ban extends CoSoVatChat{
 	public double canNang() {
 		return doDai * doRong * 10 + getSoChan() * 10;
 	}
+	
+	@Override
+    public String toString() {
+        return String.format("Ban [doDai = %.1f, doRong = %.1f, canNang = %.1f]", doDai, doRong, canNang());
+    }
 }
