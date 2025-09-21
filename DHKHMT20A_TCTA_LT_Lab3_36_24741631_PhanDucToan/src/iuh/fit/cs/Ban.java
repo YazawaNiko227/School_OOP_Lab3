@@ -14,8 +14,8 @@ public class Ban extends CoSoVatChat{
 	
 	public Ban(String ma, ChatLieu chatLieu, KichCo kichCo, int soChan, double doDai, double doRong) {
 		super(ma, chatLieu, kichCo, soChan);
-		this.doDai = doDai;
-		this.doRong = doRong;
+		setDoDai(doDai);
+		setDoRong(doRong);
 	}
 
 	public double getDoDai() {
